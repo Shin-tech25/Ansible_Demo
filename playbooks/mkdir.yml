@@ -1,5 +1,5 @@
 ---
-- name: Playbookチュートリアル
+- name: local_target playbook
   hosts: local_target
   become: yes
   tasks:
