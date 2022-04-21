@@ -14,6 +14,7 @@
       copy:
         src: /etc/ansible/files/httpd.conf
         dest: /etc/httpd/conf/httpd.conf
+      notify: restart apache
 
     - name: トップページの配置
       copy:
@@ -25,3 +26,9 @@
         name: httpd
         state: started
         enabled: yes
+
+  handlers:
+    - name: restart apache
+      service:
+        name: httpd
+        state: restarted
