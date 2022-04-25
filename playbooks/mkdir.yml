@@ -1,6 +1,6 @@
 ---
 - name: local_target playbook
-  hosts: local_target
+  hosts: node1
   become: yes
   tasks:
     - name: Make Some Folder
